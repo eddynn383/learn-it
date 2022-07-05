@@ -1,0 +1,17 @@
+.layout {
+    display: grid;
+    grid-auto-flow: column;
+    height: 100vh;
+
+    &--one-column {
+        grid-template-columns: minmax(345px, auto);
+    }
+    &--two-column {
+        grid-template-columns: minmax(200px, 400px) auto;
+    }  
+}
+
+.module--tools {
+    display: flex;
+    gap: 20px;
+}

@@ -1,0 +1,28 @@
+.panel {
+    &--left {
+        display: grid;
+        grid-template-rows: 76px auto;
+        gap: 20px;
+        position: relative;
+        background-color: #fff;
+        width: 400px;
+        padding: 20px;
+        box-shadow: 4px 0px 8px rgba(0, 0, 0, 0.1);
+    }
+    &--left &--bottom {
+        display: grid;
+        grid-template-rows: auto 38px;
+        gap: 20px;
+    }
+    &--right {
+        background-color: #F0F2F4;
+    }
+    &--right &--top {
+        display: flex;
+        justify-content: space-between;
+        padding: 30px;
+    }
+    &--right &--bottom {
+        padding: 30px;
+    }
+}

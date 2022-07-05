@@ -1,0 +1,33 @@
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.card {
+    --border: solid 1px #d3d3d3;
+    box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.04);
+    border: var(--border);
+    background-color: #fff;
+    width: 100%;
+    &_header {
+        cursor: pointer;
+        user-select: none;
+        display: flex;
+        justify-content: space-between;
+    }
+    &_body {
+        border-top: var(--border);
+        font-size: 16px;
+        line-height: 1.4;
+    }
+    &_header,
+    &_body {
+        padding: 15px 20px;
+    }
+    &:not(:last-child) {
+        border-bottom: none;
+    }
+}
+
+
