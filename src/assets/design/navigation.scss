@@ -29,7 +29,7 @@
                     color: #BF4640;
                 }
                 &.link--active {
-                    background-color: #BF4640;
+                    background-color: var(--theme-color-primary);
                     color: #fff;
                 }
             }

@@ -1,6 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { FirebaseProvider } from "./context/FirebaseContext";
+import { ThemeProvider } from "./context/themeContext";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import App from "./App";
 import "./assets/design/reset.scss";
@@ -13,9 +14,11 @@ root.render(
     <React.StrictMode>
         <BrowserRouter>
             <FirebaseProvider>
-                <Routes>
-                    <Route path="/*" element={<App />} />
-                </Routes>
+                <ThemeProvider>
+                    <Routes>
+                        <Route path="/*" element={<App />} />
+                    </Routes>
+                </ThemeProvider>
             </FirebaseProvider>
         </BrowserRouter>
     </React.StrictMode>

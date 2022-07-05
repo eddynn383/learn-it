@@ -102,6 +102,8 @@ const Signin:FC = (o: any) => {
 
     return (
         <>
+        <div className="module module--left"></div>
+        <div className="module module--right">
             <Form classes={['signin']} onSubmit={handleSubmit}>
                 <Input {...props.email} type="email"/>
                 <Input {...props.password} type={type === '' ? 'password' : type}/>
@@ -111,6 +113,7 @@ const Signin:FC = (o: any) => {
             <div className="w-100 text-center mt-2">
                 Need an account? <Link to="/signup">Sign Up</Link>
             </div>
+        </div>
         </>
     )
 }
