@@ -1,6 +1,7 @@
 import { FC, useEffect, useRef, useState } from "react";
 import useToggle from '../hooks/useToggle';
-import Button, {IPropsButton} from "../components/Button";
+import Button from "../components/Button";
+import { IPropsButton } from "../components/Button/interface";
 import { addClass, addActive, classModifier } from '../functions/utils';
 import '../assets/design/dropdown.scss';
 

@@ -1,0 +1,109 @@
+{
+    "uid": "m7lQWm7FihfBbM6Fek0J8qA0xBQ2",
+    "email": "eduard@admin.com",
+    "currency": "RON",
+    "language": "romanian",
+    "roles": [900],
+    "theme": "light",
+    "rewards": {
+        "achievements": {
+            "all": [{
+                "date": "Nov 5, 2021 at 11:55:30 AM UTC+3",
+                "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean nibh enim, finibus eu rhoncus congue, mattis rutrum nisi.",
+                "title": "First Training"
+            }, {
+                "date": "January 10, 2022 at 11:36:05 AM UTC+3",
+                "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean nibh enim, finibus eu rhoncus congue, mattis rutrum nisi. Integer maximus fermentum lacus, eget mattis nunc convallis a.",
+                "title": "Scholarships"
+            }, {
+                "date": "March 24, 2022 at 9:12:50 AM UTC+3",
+                "description": "Curabitur gravida, metus ut vehicula posuere, augue ipsum fringilla velit, sit amet luctus risus ligula eget ligula. Suspendisse arcu sem, facilisis nec mi et, condimentum consectetur lectus. Vestibulum mollis accumsan dui, quis varius elit dictum quis. Aenean dapibus posuere quam.",
+                "title": "Honor Roll"
+            }, {
+                "date": "May 4, 2022 at 2:02:54 PM UTC+3",
+                "description": "Nullam sem enim, finibus id ante nec, pulvinar malesuada turpis. Cras elit nisl, volutpat varius fringilla vitae, vehicula id arcu. Fusce erat metus, rhoncus sit amet ante ullamcorper, finibus commodo nulla.",
+                "title": "Perfect attendance awards"
+            }, {
+                "date": "July 25, 2022 at 7:09:44 PM UTC+3",
+                "description": "Nullam sem enim, finibus id ante nec, pulvinar malesuada turpis.",
+                "title": "Work related award"
+            }],
+            "year": [{
+                "date": "January 10, 2022 at 11:36:05 AM UTC+3",
+                "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean nibh enim, finibus eu rhoncus congue, mattis rutrum nisi. Integer maximus fermentum lacus, eget mattis nunc convallis a.",
+                "title": "Scholarships"
+            }, {
+                "date": "March 24, 2022 at 9:12:50 AM UTC+3",
+                "description": "Curabitur gravida, metus ut vehicula posuere, augue ipsum fringilla velit, sit amet luctus risus ligula eget ligula. Suspendisse arcu sem, facilisis nec mi et, condimentum consectetur lectus. Vestibulum mollis accumsan dui, quis varius elit dictum quis. Aenean dapibus posuere quam.",
+                "title": "Honor Roll"
+            }, {
+                "date": "May 4, 2022 at 2:02:54 PM UTC+3",
+                "description": "Nullam sem enim, finibus id ante nec, pulvinar malesuada turpis. Cras elit nisl, volutpat varius fringilla vitae, vehicula id arcu. Fusce erat metus, rhoncus sit amet ante ullamcorper, finibus commodo nulla.",
+                "title": "Perfect attendance awards"
+            }, {
+                "date": "July 25, 2022 at 7:09:44 PM UTC+3",
+                "description": "Nullam sem enim, finibus id ante nec, pulvinar malesuada turpis.",
+                "title": "Work related award"
+            }],
+            "month": [{
+                "date": "July 25, 2022 at 7:09:44 PM UTC+3",
+                "description": "Nullam sem enim, finibus id ante nec, pulvinar malesuada turpis.",
+                "title": "Work related award"
+            }],
+            "length": 5
+        },
+        "skills": {
+            "all": [{
+                "date": "June 14, 2022 at 10:05:04 AM UTC+3",
+                "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean nibh enim, finibus eu rhoncus congue, mattis rutrum nisi. Integer maximus fermentum lacus, eget mattis nunc convallis a. Curabitur gravida, metus ut vehicula posuere, augue ipsum fringilla velit, sit amet luctus risus ligula eget ligula. Suspendisse arcu sem, facilisis nec mi et, condimentum consectetur lectus. Vestibulum mollis accumsan dui, quis varius elit dictum quis. Aenean dapibus posuere quam. ",
+                "title": "Hypertext Markup Language (HTML)"
+            }, {
+                "date": "June 23, 2022 at 6:22:56 PM UTC+3",
+                "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean nibh enim, finibus eu rhoncus congue, mattis rutrum nisi. Integer maximus fermentum lacus, eget mattis nunc convallis a. Curabitur gravida, metus ut vehicula posuere, augue ipsum fringilla velit, sit amet luctus risus ligula eget ligula. Suspendisse arcu sem, facilisis nec mi et, condimentum consectetur lectus. Vestibulum mollis accumsan dui, quis varius elit dictum quis. Aenean dapibus posuere quam. ",
+                "title": "Cascading Style Sheets (CSS)"
+            }, {
+                "date": "July 21, 2022 at 12:55:16 PM UTC+3",
+                "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean nibh enim, finibus eu rhoncus congue, mattis rutrum nisi. Integer maximus fermentum lacus, eget mattis nunc convallis a. Curabitur gravida, metus ut vehicula posuere, augue ipsum fringilla velit, sit amet luctus risus ligula eget ligula. Suspendisse arcu sem, facilisis nec mi et, condimentum consectetur lectus. Vestibulum mollis accumsan dui, quis varius elit dictum quis. Aenean dapibus posuere quam. ",
+                "title": "Javascript (JS)"
+            }],
+            "year": [{
+                "date": "June 14, 2022 at 10:05:04 AM UTC+3",
+                "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean nibh enim, finibus eu rhoncus congue, mattis rutrum nisi. Integer maximus fermentum lacus, eget mattis nunc convallis a. Curabitur gravida, metus ut vehicula posuere, augue ipsum fringilla velit, sit amet luctus risus ligula eget ligula. Suspendisse arcu sem, facilisis nec mi et, condimentum consectetur lectus. Vestibulum mollis accumsan dui, quis varius elit dictum quis. Aenean dapibus posuere quam. ",
+                "title": "Hypertext Markup Language (HTML)"
+            }, {
+                "date": "June 23, 2022 at 6:22:56 PM UTC+3",
+                "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean nibh enim, finibus eu rhoncus congue, mattis rutrum nisi. Integer maximus fermentum lacus, eget mattis nunc convallis a. Curabitur gravida, metus ut vehicula posuere, augue ipsum fringilla velit, sit amet luctus risus ligula eget ligula. Suspendisse arcu sem, facilisis nec mi et, condimentum consectetur lectus. Vestibulum mollis accumsan dui, quis varius elit dictum quis. Aenean dapibus posuere quam. ",
+                "title": "Cascading Style Sheets (CSS)"
+            }, {
+                "date": "July 21, 2022 at 12:55:16 PM UTC+3",
+                "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean nibh enim, finibus eu rhoncus congue, mattis rutrum nisi. Integer maximus fermentum lacus, eget mattis nunc convallis a. Curabitur gravida, metus ut vehicula posuere, augue ipsum fringilla velit, sit amet luctus risus ligula eget ligula. Suspendisse arcu sem, facilisis nec mi et, condimentum consectetur lectus. Vestibulum mollis accumsan dui, quis varius elit dictum quis. Aenean dapibus posuere quam. ",
+                "title": "Javascript (JS)"
+            }],
+            "month": [{
+                "date": "July 21, 2022 at 12:55:16 PM UTC+3",
+                "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean nibh enim, finibus eu rhoncus congue, mattis rutrum nisi. Integer maximus fermentum lacus, eget mattis nunc convallis a. Curabitur gravida, metus ut vehicula posuere, augue ipsum fringilla velit, sit amet luctus risus ligula eget ligula. Suspendisse arcu sem, facilisis nec mi et, condimentum consectetur lectus. Vestibulum mollis accumsan dui, quis varius elit dictum quis. Aenean dapibus posuere quam. ",
+                "title": "Javascript (JS)"
+            }],
+            "length": 3
+        },
+        "certifications": {
+            "all": [{
+                "date": "June 02, 2022 at 09:13:36 PM UTC+3",
+                "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean nibh enim, finibus eu rhoncus congue, mattis rutrum nisi.",
+                "title": "Front End Master"
+            }],
+            "year": [{
+                "date": "June 02, 2022 at 09:13:36 PM UTC+3",
+                "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean nibh enim, finibus eu rhoncus congue, mattis rutrum nisi.",
+                "title": "Front End Master"
+            }],
+            "month": [],
+            "length": 1
+        },
+        "level": {
+            "value": "4",
+            "experience": "1524",
+            "level-cap": "2240"
+        }
+    }
+}

@@ -1,15 +1,13 @@
 import { useState } from 'react';
 import Panel from '../components/Panel';
 import Logo from '../components/Logo';
-import Navigation from '../blocks/Navigation';
-import CalendarSchedule from '../components/CalendarSchedule';
-import Search from '../blocks/Search';
 import Cover from '../components/Cover';
 import Button from '../components/Button';
 import Icon from '../components/Icon';
 import Badge from '../components/Badge';
+import Navigation from '../blocks/Navigation';
+import Search from '../blocks/Search';
 import { Outlet } from "react-router-dom";
-// import Dropdown from '../blocks/Dropdown';
 
 import Dropdown from '../blocks/Dropdown';
 import Card from '../blocks/Card';
@@ -19,21 +17,9 @@ import coverURL from '../assets/profile/profile.jpg';
 
 import useAuth from '../hooks/useAuth';
 
-
-// interface IPropsLayout {
-//     logo: Object;
-//     navigation: Object;
-//     timeline: Object;
-//     search: Object;
-//     notifications: Object;
-//     messages: Object;
-//     profile: Object;
-// }
-
 const Layout = (o:any) => {
-    // const logoPath = require('../assets/logo/logo-light.svg')
-    // const coverURL = require('../assets/profile/profile.jpg')
-    const props = {
+
+    const attrs = {
         logo: {
             classes: ['main'],
             url: logoPath,
@@ -100,7 +86,7 @@ const Layout = (o:any) => {
     }
 
     const [message, setMessage] = useState('')
-    const { signout } = useAuth()
+    const { signout, currentPage, setCurrentPage } = useAuth()
 
     const handleClick = async () => {
         try {
@@ -114,27 +100,23 @@ const Layout = (o:any) => {
         <> 
             <Panel classes="panel panel--left">
                 <Panel classes="panel panel--top">
-                    <Logo {...props.logo} />
+                    <Logo {...attrs.logo} />
                 </Panel>
                 <Panel classes="panel panel--bottom">
-                    <Navigation {...props.navigation}/>
-                    {/* <CalendarSchedule {...props.timeline}/> */}
-                    <Button {...props.logout} onClick={handleClick}>Log out</Button>
+                    <Navigation {...attrs.navigation}/>
+                    <div className="module module--logout">
+                        <Button {...attrs.logout} onClick={handleClick}>Log out</Button>
+                    </div>
                 </Panel>
             </Panel>
             <Panel classes="panel panel--right">
                 <Panel classes="panel panel--top">
-                    <Search {...props.search}/>
+                    <h1 className="module module--page-title">{currentPage}</h1>
                     <Panel classes="module module--tools">
-                        <Dropdown {...props.notifications}/>
-                        <Dropdown {...props.messages}/>
-                        <Dropdown {...props.profile}/>
-                        {/* <Dropdown>
-                            <Card>
-                                <Dropdown.Selector>test</Dropdown.Selector>
-                                <Dropdown.Options>tes  test test tset</Dropdown.Options>
-                            </Card>
-                        </Dropdown> */}
+                        <Search {...attrs.search}/>
+                        <Dropdown {...attrs.notifications}/>
+                        <Dropdown {...attrs.messages}/>
+                        <Dropdown {...attrs.profile}/>
                     </Panel>
                 </Panel>
                 <Panel classes="panel panel--bottom">

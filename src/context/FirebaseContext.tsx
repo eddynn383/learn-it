@@ -1,7 +1,7 @@
 import { FC, createContext, useState, useEffect } from "react";
 import { auth, db } from "../services/firebase";
 import { createUserWithEmailAndPassword, onAuthStateChanged, signInWithEmailAndPassword, signOut } from "firebase/auth";
-import { collection, getDocs, setDoc, getDoc, onSnapshot, doc } from "firebase/firestore";
+import { collection, getDocs, setDoc, getDoc, onSnapshot, doc, query, where } from "firebase/firestore";
 
 const FirebaseContext = createContext<IPropsContext>(null!);
 
@@ -12,16 +12,20 @@ interface IPropsFP {
 interface IPropsContext {
     currentUser: any;
     setCurrentUser: any;
+    currentPage: any;
+    setCurrentPage: any;
     signup: any;
     signin: any;
     signout: any;
     getDB: any;
+    getConditionedDB: any;
     setDB: any;
     getSnapshot: any;
 }
 
 export const FirebaseProvider:FC<IPropsFP> = ({ children }) => {
     const [currentUser, setCurrentUser] = useState(undefined)
+    const [currentPage, setCurrentPage] = useState('Dashboard')
     const [loading, setLoading] = useState(true)
 
     const getDB = (dbGetAll:boolean, dbName:string, dbTarget:string) => {
@@ -31,8 +35,12 @@ export const FirebaseProvider:FC<IPropsFP> = ({ children }) => {
         return getDoc(doc(db, dbName, dbTarget))
     }
 
-    const setDB = (dbName:string, dbTarget:string, dbValue:any) => {
-        return setDoc(doc(db, dbName, dbTarget), dbValue)
+    const getConditionedDB = (dbName:string, dbConditionTarget:string, dbCondition:string ) => {
+        return getDocs(query(collection(db, dbName), where(dbConditionTarget, "==", dbCondition)))
+    }
+
+    const setDB = (dbName:string, dbTarget:string, dbValue:any, dbMerge:boolean) => {
+        return setDoc(doc(db, dbName, dbTarget), dbValue, {merge: dbMerge ? dbMerge : false})
     }
 
     const getSnapshot = (dbName:string, dbTarget:string) => {
@@ -63,10 +71,13 @@ export const FirebaseProvider:FC<IPropsFP> = ({ children }) => {
     const value = {
         currentUser, 
         setCurrentUser,
+        currentPage,
+        setCurrentPage,
         signup,
         signin,
         signout,
         getDB,
+        getConditionedDB,
         setDB,
         getSnapshot
     }

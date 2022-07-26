@@ -1,17 +1,9 @@
 import { FC } from 'react';
-import { classModifier, addClass } from '../functions/utils';
-import '../assets/design/button.scss';
+import { classModifier, addClass } from '../../functions/utils';
+import './style.scss';
 
-export interface IPropsButton {
-    children?: any;
-    classes: Array<string>;
-    id?: string;
-    size?: string;
-    type?: any;
-    theme?: string;
-    title?: string;
-    onClick?: (e: any) => void;
-}
+
+import { IPropsButton } from './interface';
 
 const Button:FC<IPropsButton> = ({ children, classes, id, size="medium", type="button", theme="primary", title, onClick}) => {
 

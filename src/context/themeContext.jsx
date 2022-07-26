@@ -1,21 +1,22 @@
-import { createContext, useReducer } from "react";
+import { createContext, useState } from "react";
 
-export const ThemeContext = createContext(null);
+const ThemeContext = createContext(null);
 
-const initialState = {
-    currentTheme: 'light'
-}
+export const ThemeProvider = ({children}) => {
+    const [theme, setTheme] = useState()
+    const [colors,  setColors] = useState()
+    const [currentPage,  setCurrentPage] = useState()
 
-const themeReducer = (state, action) => {
-    switch (action.type) {
-        case "DARKMODE": return { currentTheme: 'dark' }
-        case "LIGHTMODE": return { currentTheme: 'light' }
-        default: return state;
+    const value = {
+        theme,
+        setTheme,
+        colors,
+        setColors,
+        currentPage,
+        setCurrentPage
     }
+
+    return <ThemeContext.Provider value={value}>{children}</ThemeContext.Provider>
 }
 
-export const ThemeProvider = (props) => {
-    const [state, dispatch] = useReducer(themeReducer, initialState);
-
-    return <ThemeContext.Provider value={{state, dispatch}}>{props.children}</ThemeContext.Provider>
-}
+export default ThemeContext

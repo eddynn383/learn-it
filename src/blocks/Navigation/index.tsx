@@ -1,16 +1,14 @@
 import { useState, useEffect, FC } from 'react';
-import NavLink from '../components/NavLink';
+import NavLink from '../../components/NavLink';
 // import useNavigation from '../hooks/useNavigation';
-import { addClass, classModifier } from '../functions/utils';
-import useAuth from '../hooks/useAuth';
-import '../assets/design/navigation.scss';
+import { addClass, classModifier } from '../../functions/utils';
+import useAuth from '../../hooks/useAuth';
+import './style.scss';
 
-interface IPropsNavigation {
-    classes: Array<string>;
-}
+import { IPropsNavigation } from './interface';
 
 const Navigation:FC<IPropsNavigation> = ({classes}) => {
-    const { getDB }:any = useAuth()
+    const { getDB } = useAuth()
     const [navigation, setNavigation] = useState<Object[]>()
     
     const getNavigation = async () => {

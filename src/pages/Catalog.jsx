@@ -3,9 +3,10 @@ import { useState, useEffect, FC } from 'react';
 import Accordion from '../blocks/Accordion';
 import Card from '../blocks/Card';
 import useAuth from '../hooks/useAuth';
+import db from '../local-files/db.json'
 
 const Catalog = () => {
-    const { getDB } = useAuth();
+    const { getDB, setDB, currentUser } = useAuth();
     const [ courses, setCourses ] = useState();
 
     const getCourses = async () => {
@@ -21,11 +22,22 @@ const Catalog = () => {
         }
     }
 
+    const addData = async (e) => {
+        e.preventDefault()
+        try {
+            console.log('event is fired')
+            await setDB('users', currentUser.uid, db)
+        } catch (error) {
+            console.error(error)
+        }
+    }
+
     useEffect(() => {
         getCourses()
     }, [])
 
-    console.log(courses)
+    // console.log(courses)
+
 
     return (
         <>        
@@ -40,6 +52,7 @@ const Catalog = () => {
                     ))
                 }
             </div>
+            <button onClick={addData}>Modify db</button>
         </>
     )
 }

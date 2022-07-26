@@ -26,3 +26,19 @@ export const addActive = (a:string[], b:string, c:any) => {
     c && a?.push(`${a[0]}--${b}`)
     return a;
 }
+
+const headTag = document.getElementsByTagName('head')[0];
+const styleTag = document.createElement("style");
+
+export const setStyle = (a:any) => {
+    styleTag.innerHTML = `
+        :root {
+            --theme-color-primary: ${a?.primary};
+            --theme-color-secondary: ${a?.secondary};
+            --theme-color-background: ${a?.background};
+            --theme-color-text: ${a?.text};
+        }
+    `
+    headTag.appendChild(styleTag)
+}
+

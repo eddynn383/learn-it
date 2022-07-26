@@ -1,15 +1,11 @@
 import { FC } from 'react';
-import Input, { IPropsInput } from '../components/Input';
-import Button, { IPropsButton } from '../components/Button';
-import Icon from '../components/Icon';
-import { addClass, classModifier } from '../functions/utils';
-import '../assets/design/search.scss';
+import Input from '../../components/Input';
+import Button from '../../components/Button';
+// import Icon from '../../components/Icon';
+import { addClass, classModifier } from '../../functions/utils';
+import './style.scss';
 
-interface IPropsSearch {
-    classes: Array<string>;
-    input: IPropsInput;
-    button: IPropsButton;
-}
+import { IPropsSearch } from './interface'
 
 const Search:FC<IPropsSearch> = ({classes, input, button}) => {
     // console.log(o)

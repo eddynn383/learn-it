@@ -1,0 +1,37 @@
+.color-picker {
+    display: grid;
+    grid-template-columns: 40px auto;
+    gap: 5px;
+    padding: 5px;
+    background-color: #ddd;
+    border: 2px solid #cccccc;
+    border-radius: 13px;
+    .input {
+        &--color-selector {
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            display: block;
+            background-color: transparent;
+            width: 40px;
+            height: 40px;
+            border: 2px solid #ebebeb;
+            border-radius: 10px;
+            margin: 0;
+            overflow: hidden;
+        }
+        &--color-name {
+            padding: 5px 10px;
+            border-radius: 10px;
+            background-color: rgba(255, 255, 255, 0.4);
+            text-transform: uppercase;
+            font-size: 16px;
+        }
+        &::-webkit-color-swatch-wrapper {
+            padding: 0;
+        }
+        &::-webkit-color-swatch {
+            border-radius: 5px;
+            border: none;
+        }
+    }
+}

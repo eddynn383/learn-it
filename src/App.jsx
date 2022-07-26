@@ -1,8 +1,10 @@
 import { useState, useEffect, useContext } from 'react';
 import { Routes, Route } from 'react-router-dom';
-import useAuth from './hooks/useAuth';
 
-import { ThemeContext } from "./context/themeContext";
+import useAuth from './hooks/useAuth';
+import useTheme from './hooks/useTheme';
+
+import { setStyle } from './functions/utils';
 
 import Layout from './pages/Layout';
 import Dashboard from './pages/Dashboard';
@@ -14,6 +16,8 @@ import Settings from './pages/Settings';
 import RequireAuth from './helper/RequireAuth';
 
 import './assets/design/layout.scss';
+import './local-files/defaultTheme.json'
+import db from './local-files/db.json'
 
 const ROLES = {
     'User': 2001,
@@ -22,46 +26,59 @@ const ROLES = {
 }
 
 const App = () => {
-    const theme = useContext(ThemeContext);
-    const currTheme = theme.state.currentTheme;
-    console.log(currTheme)
+    const [ loading, setLoading ] = useState(true);
+    const { getDB, currentUser } = useAuth();
+    const { theme, setTheme, colors, setColors } = useTheme();
 
-    const { getDB } = useAuth();
-    // const [ theme, setTheme ] = useState('default-theme');
-    const [ palette , setPalette ] = useState('default-user');
-    const [ colors, setColors ] = useState();
-    const [ loading, setLoading ] = useState(true)
-
-    const root = document.querySelector(':root');
-
-
-
-    const getCourses = async () => { 
+    const themeInit = async () => { 
         try {       
-            const db = await getDB(false, 'colors', 'default-theme')
-            const allThemes = db.data()
-            setColors(allThemes[palette])
+            setLoading(true)  
 
+            const user = await getDB(false, 'users', currentUser.uid)
+            const userData = user.data()
+            const userTheme = userData['theme']
+            setTheme(userTheme)
+
+            const getColors = await getDB(false, 'colors', 'default')
+            const getColorsData = getColors.data()
+            setColors(getColorsData[userTheme])
+
+            setLoading(false)  
         } catch (error) {
             console.error(error)
         }
-    } 
+    }
 
-    colors?.forEach((item) => {
-        // console.log(item)
-        root.style.setProperty('--theme-color-' + item.name, '#' + item.value);
-    }) 
 
+
+    // const styleLoader = async () => { 
+    //     try { 
+    //         setLoading(true)      
+    //         const user = await getDB(false, 'users', currentUser.uid)
+    //         const userData = user.data()
+    //         const userTheme = userData['theme']
+    //         const getColors = await getDB(false, 'colors', 'default')
+    //         const getColorsData = getColors.data()
+
+    //         setTheme(userTheme)
+    //         setColors(getColorsData[userTheme])
+    //         setStyle(getColorsData[userTheme])
+    //         setLoading(false)
+    //     } catch (error) {
+    //         console.error(error)
+    //     }
+    // }
+    
     useEffect(() => {
-        getCourses()
-        setLoading(false)
-    }, [])
+        themeInit()
+        // console.log(theme)
+        // styleLoader()
+        console.log(db)
+    }, [theme])
     
     return (
         <>
-
-            { 
-
+            {
                 loading ?
                 <p>Loading...</p>
                 : 

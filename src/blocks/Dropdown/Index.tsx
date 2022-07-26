@@ -14,7 +14,7 @@ const useEventKey = (eventKey: string | number, onToggle: (eventKey: string | nu
     return [activeEventKey, setActiveEventKey];
 }
 
-const Dropdown = ({element: Component,activeEventKey, onToggle, children, ...otherProps}:IPropsDropdown) => {
+const Dropdown = ({element: Component, activeEventKey, onToggle, children, ...otherProps}:IPropsDropdown) => {
     const [eventKey, setEventKey] = useEventKey(activeEventKey, onToggle)
     
     const handleToggle = useCallback((eventKey: string | number) => {
