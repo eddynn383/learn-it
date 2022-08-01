@@ -1,0 +1,84 @@
+.button {
+    border-radius: 5px;
+    font-family: 'Work Sans', sans-serif;
+    cursor: pointer;
+    &--reset {
+        background-color: transparent;
+        border: none;
+        padding: 0;
+        margin: 0;
+    }
+    &--text.button--primary {
+        background-color: var(--theme-button-background-default, var(--theme-color-primary, #BF4640));
+        color: var(--theme-button-text-default, var(--theme-color-primary-over, #fff));
+        transition: .3s ease-in-out;
+        &:hover {
+            background-color: var(--theme-button-background-hover, var(--theme-color-secondary, #282828));
+            color: var(--theme-button-text-hover, var(--theme-color-secondary-over, #fff));
+        }
+    }
+    &--text.button--small {
+        font-size: 14px;
+        line-height: 16px;
+        padding: 5px 10px;
+    }
+    &--text.button--medium {
+        font-size: 16px;
+        line-height: 18px;
+        padding: 10px 20px;
+    }
+    &--text.button--large {
+        font-size: 20px;
+        line-height: 22px;
+        padding: 10px 20px;
+    }
+    &--search {
+        font-size: 16px;
+        position: absolute;
+        top: 50%;
+        right: 6px;
+        padding: 7px 8px;
+        border-radius: 50%;
+        transform: translateY(-50%);
+        transition: .3s ease-in-out;
+        cursor: pointer;
+        &:hover,
+        &:focus {
+            background-color: var(--theme-button-background-default, var(--theme-color-primary, #BF4640));
+            color: var(--theme-button-text-default, var(--theme-color-primary-over, #fff));
+        }
+    }
+    &--icon {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        line-height: 1;
+        transition: .3s ease-in-out;
+        &:hover,
+        &:focus {
+            background-color: var(--theme-button-background-default, var(--theme-color-primary, #BF4640));
+            color: var(--theme-button-text-default, var(--theme-color-primary-over, #fff));
+        }
+    }
+    &--icon.button--small {
+        font-size: 16px;
+        width: 28px;
+        height: 28px;
+    }
+    &--icon.button--medium {
+        font-size: 24px;
+        width: 40px;
+        height: 40px;
+    }
+    &--icon.button--large {
+        font-size: 28px;
+        width: 54px;
+        height: 54px;
+    }
+    &--cover {
+        border-radius: 50%;
+        height: fit-content;
+    }
+}
