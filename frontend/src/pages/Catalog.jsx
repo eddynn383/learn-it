@@ -6,6 +6,7 @@ import Icon from '../components/Icon';
 import useAuth from '../hooks/useAuth';
 import db from '../local-files/db.json'
 import CourseDataService from "../services/course"
+import Rating from '../components/Rating';
 
 const Catalog = () => {
     const { getDB, setDB, currentUser } = useAuth();
@@ -58,12 +59,16 @@ const Catalog = () => {
                     courses?.map((e, idx) => (
                         <div className="card card--course" key={idx}>
                             <div className="card_top">
-                                <img className="card_cover" src={e.coverURL} alt={e.title}/>
+                                <div className="card_cover">
+                                    <img className="card_cover-img" src={e.coverURL} alt={e.title} />
+                                    {e.isBestseller && <span className="card_cover-flag">Bestseller</span>}
+                                </div>
                                 <div className="card_details">
                                     <h3 className="card_title">
                                         <span className="card_title-text">{e.title}</span>
                                         {e.flag && <span className="card_title-flag">{e.flag}</span>}
                                     </h3>
+                                    {e.rating && <Rating score={e.rating?.score} reviews={e.rating?.reviews}/>}
                                     <p className="card_desc">{e.desc}</p>
                                 </div>
                             </div>

@@ -23,11 +23,26 @@
         box-shadow: none;
         overflow: hidden;
     }
-    &_cover[src] {
-        object-fit: cover;
-        width: 100%;
-        height: 200px;
-        border-radius: 10px;
+    &_cover {
+        position: relative;
+        &-img[src] {
+            display: block;
+            object-fit: cover;
+            width: 100%;
+            height: 200px;
+            border-radius: 10px;
+        }
+        &-flag {
+            position: absolute;
+            left: 10px;
+            bottom: 10px;
+            font-size: 14px;
+            padding: 4px;
+            background-color: #e9d04c;
+            border-radius: 5px;
+            color: #4e4413;
+            text-transform: uppercase;
+        }
     }
     &_details {
         padding: 10px 0;
