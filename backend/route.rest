@@ -1,0 +1,43 @@
+GET http://localhost:4040/api/v1/courses?title=zero
+###
+
+GET http://localhost:4040/api/v1/courses/62e67a42d0da9043dd4fa16e
+Content-Type: application/json
+
+{
+    "_id": "62e67a42d0da9043dd4fa16e"
+}
+
+###
+POST http://localhost:4040/api/v1/courses
+Content-Type: application/json
+
+{
+    "title": "THIS COURSE IS ADDED FROM THE CODELINE",
+    "desc": "This is the description of this course. You can see a several details here",
+    "language": "English (US)",
+    "type": "Interactive Course",
+    "content": [
+        {
+            "title": "HTML Introduction",
+            "desc": "HTML is the standard markup language for creating Web pages."
+        }
+    ]
+}
+
+###
+DELETE http://localhost:4040/api/v1/courses
+Content-Type: application/json
+
+{   
+    "_id": "62e671d420400b166924dcc6"
+}
+
+###
+PATCH http://localhost:4040/api/v1/courses
+Content-Type: application/json
+
+{   
+    "_id": "62e67a42d0da9043dd4fa16e",
+    "title": "THIS COURSE IS EDITED FROM THE CODELINE"
+}

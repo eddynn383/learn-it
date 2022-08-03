@@ -50,6 +50,14 @@ const App = () => {
     }
 
 
+    // const getUsers = (page=0) => {
+    //     UserDataService.getAll(page).then(res => {
+    //         console.log(res.data)
+    //     }).catch(err => {
+    //         console.log(err)
+    //     })
+    // }
+
 
     // const styleLoader = async () => { 
     //     try { 
@@ -73,7 +81,8 @@ const App = () => {
         themeInit()
         // console.log(theme)
         // styleLoader()
-        console.log(db)
+        // getUsers()
+        // console.log(db)
     }, [theme])
     
     return (

@@ -110,17 +110,19 @@ const Layout = (o:any) => {
                 </Panel>
             </Panel>
             <Panel classes="panel panel--right">
-                <Panel classes="panel panel--top">
-                    <h1 className="module module--page-title">{currentPage}</h1>
-                    <Panel classes="module module--tools">
-                        <Search {...attrs.search}/>
-                        <Dropdown {...attrs.notifications}/>
-                        <Dropdown {...attrs.messages}/>
-                        <Dropdown {...attrs.profile}/>
+                <Panel classes="panel panel--inner">
+                    <Panel classes="panel panel--top">
+                        <h1 className="module module--page-title">{currentPage}</h1>
+                        <Panel classes="module module--tools">
+                            <Search {...attrs.search}/>
+                            <Dropdown {...attrs.notifications}/>
+                            <Dropdown {...attrs.messages}/>
+                            <Dropdown {...attrs.profile}/>
+                        </Panel>
                     </Panel>
-                </Panel>
-                <Panel classes="panel panel--bottom">
-                    <Outlet />
+                    <Panel classes="panel panel--bottom">
+                        <Outlet />
+                    </Panel>
                 </Panel>
             </Panel>
         </>
